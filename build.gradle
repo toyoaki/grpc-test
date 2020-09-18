@@ -47,3 +47,17 @@ sourceSets {
         }
     }
 }
+
+task runHelloWorldServer(type: JavaExec) {
+    group = "Execution"
+    description = "Start HelloWorld Server"
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.test.grpc.helloworld.HelloWorldServer"
+}
+
+task runHelloWorldClient(type: JavaExec) {
+    group = "Execution"
+    description = "Start HelloWorld Client"
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.test.grpc.helloworld.HelloWorldClient"
+}
